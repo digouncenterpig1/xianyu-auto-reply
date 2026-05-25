@@ -40,3 +40,6 @@ orjson==3.10.5
 
 # CORS and middleware
 starlette==0.37.2
+
+# Dev/debug tools (personal addition)
+icecream==2.1.3
