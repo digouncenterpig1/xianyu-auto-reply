@@ -12,7 +12,8 @@ RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y curl ca-certificates \
+# 安装依赖时顺便装上 vim 方便容器内调试
+RUN apt-get update && apt-get install -y curl ca-certificates vim \
     && update-ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
