@@ -1,0 +1,42 @@
+# Core web framework
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+
+# WebSocket support
+websockets==12.0
+
+# HTTP client for Xianyu API calls
+httpx==0.27.0
+aiohttp==3.9.5
+
+# Data validation
+pydantic==2.7.4
+pydantic-settings==2.3.4
+
+# Database
+sqlalchemy==2.0.31
+alembic==1.13.2
+aiosqlite==0.20.0
+
+# Redis for caching and session management
+redis==5.0.7
+aioredis==2.0.1
+
+# Authentication & Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.9
+
+# AI/LLM integration
+openai==1.35.13
+
+# Scheduling for auto-reply tasks
+apscheduler==3.10.4
+
+# Utilities
+python-dotenv==1.0.1
+loguru==0.7.2
+orjson==3.10.5
+
+# CORS and middleware
+starlette==0.37.2
