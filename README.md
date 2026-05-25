@@ -3,6 +3,8 @@
 本文档面向运维与部署人员，详细说明本项目的部署流程、依赖版本、环境变量、常用运维命令与故障排查方法。
 
 > **个人备注**：这是我的个人学习用 fork，主要用于研究 WebSocket 接入和 AI 回复部分的实现。如需原版请访问 [zhinianboke/xianyu-auto-reply](https://github.com/zhinianboke/xianyu-auto-reply)。
+>
+> **学习笔记**：重点关注 `websocket/` 和 `common/` 目录，AI 回复逻辑入口在 `backend-web/` 里，后续打算试试接入本地 Ollama 替代 OpenAI API。
 
 ## 交流群
 
@@ -107,9 +109,4 @@
 
 ## 二、Python 版本要求（重要）
 
-不同部署方式对 Python 版本要求**不一样**，请严格按照下表选择：
-
-| 部署方式 | Python 版本 | 说明 |
-| --- | --- | --- |
-| Docker 加密源码构建 | **不需要本机 Python** | 镜像内统一使用 Python 3.11 |
-| 本地源码运行（Windows） | **必须 Python 3
+不同部署方式对 Python 版本要求**不一样**，
