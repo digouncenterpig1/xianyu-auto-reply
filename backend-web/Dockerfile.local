@@ -13,7 +13,8 @@ RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 WORKDIR /app
 
 # 安装依赖时顺便装上 vim 方便容器内调试
-RUN apt-get update && apt-get install -y curl ca-certificates vim \
+# 也加上 less 和 procps，方便查看进程和日志
+RUN apt-get update && apt-get install -y curl ca-certificates vim less procps \
     && update-ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
@@ -39,5 +40,8 @@ EXPOSE 8089
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONPATH=/app
 ENV TZ=Asia/Shanghai
+# 设置语言环境，避免中文日志乱码
+ENV LANG=C.UTF-8
+ENV LC_ALL=C.UTF-8
 
 CMD ["python", "backend-web/main.py"]
