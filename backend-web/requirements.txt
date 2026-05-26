@@ -43,3 +43,6 @@ starlette==0.37.2
 
 # Dev/debug tools (personal addition)
 icecream==2.1.3
+
+# Personal additions - useful for local dev
+rich==13.7.1  # nicer tracebacks and logging output
